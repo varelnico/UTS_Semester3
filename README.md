@@ -67,11 +67,3 @@ BukuRuang/
 2. Buka folder project menggunakan Visual Studio Code.
 3. Jalankan file `login.html` melalui browser.
 4. Website sudah dapat digunakan.
-
-## Catatan
-
-Website ini dibuat untuk keperluan pembelajaran dan masih menggunakan Local Storage sebagai tempat penyimpanan data. Beberapa fitur seperti lupa password dan pembayaran masih berupa simulasi dan belum terhubung dengan layanan eksternal.
-
-## Penutup
-
-Project BukuRuang dibuat sebagai latihan dalam menerapkan HTML, CSS, dan JavaScript ke dalam sebuah website. Melalui project ini, saya belajar membuat halaman website, mengatur tampilan, mengolah data, membuat validasi form, dan menghubungkan beberapa halaman agar dapat digunakan secara bersamaan.

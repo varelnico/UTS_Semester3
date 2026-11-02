@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lacak Paket | BukuRuang</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <a class="brand" href="dashboard.html">
+            <span class="brand-mark">br.</span>
+            <span>BukuRuang</span>
+        </a>
+
+        <nav class="main-nav">
+            <a href="dashboard.html">Beranda</a>
+            <a href="stok.html">Katalog</a>
+            <a href="checkout.html">Pemesanan</a>
+            <a class="active" href="tracking.html">Lacak paket</a>
+        </nav>
+
+        <button class="btn btn-outline btn-small" onclick="logout()">
+            Keluar ↗
+        </button>
+
+    </header>
+
+
+    <main class="page-wrap tracking-wrap">
+
+        <section class="page-intro short-intro">
+
+            <p class="eyebrow accent">
+                03 / PELACAKAN
+            </p>
+
+            <h1>
+                Perjalanan buku<br>
+                <em>sampai ke tanganmu.</em>
+            </h1>
+
+            <p>
+                Masukkan nomor Delivery Order (DO)
+                untuk melihat perkembangan pengiriman.
+            </p>
+
+        </section>
+
+
+        <section class="tracking-search">
+
+            <div>
+
+                <p class="eyebrow">
+                    LACAK PESANAN
+                </p>
+
+                <h2>
+                    Di mana paketmu sekarang?
+                </h2>
+
+            </div>
+
+
+            <form id="formTracking" class="search-form">
+
+                <input
+                    type="text"
+                    id="nomorDO"
+                    placeholder="Contoh: 20230012"
+                    required
+                >
+
+                <button class="btn" type="submit">
+                    Lacak paket ↗
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <div id="hasilTracking"></div>
+
+
+        <p class="tracking-hint">
+
+            Coba nomor DO contoh:
+
+            <button
+                class="text-action"
+                type="button"
+                onclick="isiContohTracking('20230012')"
+            >
+                20230012
+            </button>
+
+            atau
+
+            <button
+                class="text-action"
+                type="button"
+                onclick="isiContohTracking('20230013')"
+            >
+                20230013
+            </button>.
+
+        </p>
+
+    </main>
+
+
+    <footer class="site-footer">
+        <span>© 2026 BukuRuang</span>
+        <span>Informasi pengiriman</span>
+    </footer>
+
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

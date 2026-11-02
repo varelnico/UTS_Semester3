@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan | BukuRuang</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <a class="brand" href="dashboard.html">
+            <span class="brand-mark">br.</span>
+            <span>BukuRuang</span>
+        </a>
+
+        <nav class="main-nav">
+            <a href="dashboard.html">Beranda</a>
+            <a href="stok.html">Katalog</a>
+            <a class="active" href="checkout.html">Pemesanan</a>
+            <a href="tracking.html">Lacak paket</a>
+        </nav>
+
+        <button class="btn btn-outline btn-small" onclick="logout()">
+            Keluar ↗
+        </button>
+    </header>
+
+    <main class="page-wrap">
+
+        <section class="page-intro short-intro">
+            <p class="eyebrow accent">02 / PEMESANAN</p>
+
+            <h1>
+                Satu langkah lagi<br>
+                <em>menuju bacaan baru.</em>
+            </h1>
+
+            <p>
+                Lengkapi detail buku dan alamat tujuan pengiriman.
+            </p>
+        </section>
+
+        <section class="checkout-layout">
+
+            <div class="panel order-panel">
+
+                <div class="section-heading compact">
+                    <div>
+                        <p class="eyebrow">FORMULIR PESANAN</p>
+                        <h2>Detail pemesan</h2>
+                    </div>
+
+                    <span class="step-label">LANGKAH 01</span>
+                </div>
+
+                <form id="formCheckout" class="stack-form">
+
+                    <div class="two-col">
+
+                        <div>
+                            <label for="namaPemesan">
+                                Nama lengkap
+                            </label>
+
+                            <input
+                                id="namaPemesan"
+                                type="text"
+                                placeholder="Nama penerima"
+                                required
+                            >
+                        </div>
+
+                        <div>
+                            <label for="emailPemesan">
+                                Email
+                            </label>
+
+                            <input
+                                id="emailPemesan"
+                                type="email"
+                                placeholder="nama@email.com"
+                                required
+                            >
+                        </div>
+
+                        <div>
+                            <label for="teleponPemesan">
+                                Nomor telepon
+                            </label>
+
+                            <input
+                                id="teleponPemesan"
+                                type="tel"
+                                placeholder="08xxxxxxxxxx"
+                                required
+                            >
+                        </div>
+
+                        <div>
+                            <label for="pilihBuku">
+                                Pilih buku
+                            </label>
+
+                            <select id="pilihBuku" required>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="jumlahPesan">
+                                Jumlah
+                            </label>
+
+                            <input
+                                id="jumlahPesan"
+                                type="number"
+                                min="1"
+                                value="1"
+                                required
+                            >
+                        </div>
+
+                        <div>
+                            <label for="metodeBayar">
+                                Metode pembayaran
+                            </label>
+
+                            <select id="metodeBayar" required>
+                                <option value="">
+                                    Pilih metode
+                                </option>
+
+                                <option>
+                                    Transfer Bank
+                                </option>
+
+                                <option>
+                                    COD
+                                </option>
+
+                                <option>
+                                    E-Wallet
+                                </option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <label for="alamatPemesan">
+                            Alamat pengiriman
+                        </label>
+
+                        <textarea
+                            id="alamatPemesan"
+                            rows="3"
+                            placeholder="Jalan, nomor rumah, kecamatan, kota"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <div class="total-line">
+                        <span>Estimasi total</span>
+
+                        <strong id="totalHarga">
+                            Rp 0
+                        </strong>
+                    </div>
+
+                    <button class="btn" type="submit">
+                        Konfirmasi pemesanan
+                        <span>→</span>
+                    </button>
+
+                </form>
+
+            </div>
+
+            <aside class="order-aside">
+
+                <p class="eyebrow">INFORMASI</p>
+
+                <h2>Sebelum memesan</h2>
+
+                <ul>
+                    <li>
+                        Pastikan judul dan jumlah buku sudah benar.
+                    </li>
+
+                    <li>
+                        Periksa kembali alamat pengiriman.
+                    </li>
+
+                    <li>
+                        Simpan nomor DO setelah pesanan dibuat.
+                    </li>
+                </ul>
+
+                <div class="aside-stamp">
+                    br.
+
+                    <span>
+                        BUKU<br>
+                        RUANG
+                    </span>
+                </div>
+
+            </aside>
+
+        </section>
+
+        <section class="panel history-panel" id="riwayat">
+
+            <div class="section-heading compact">
+
+                <div>
+                    <p class="eyebrow">CATATAN PEMBELIAN</p>
+                    <h2>Riwayat transaksi</h2>
+                </div>
+
+                <a class="text-action" href="tracking.html">
+                    Lacak pesanan →
+                </a>
+
+            </div>
+
+            <div class="table-wrap">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Nomor DO</th>
+                            <th>Nama pemesan</th>
+                            <th>Buku</th>
+                            <th>Total</th>
+                            <th>Pembayaran</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tabelTransaksi">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <span>© 2026 BukuRuang</span>
+        <span>Terima kasih telah membaca.</span>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
+```

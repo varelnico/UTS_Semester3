@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Buku | BukuRuang</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <a class="brand" href="dashboard.html">
+            <span class="brand-mark">br.</span>
+            <span>BukuRuang</span>
+        </a>
+
+        <nav class="main-nav">
+            <a href="dashboard.html">Beranda</a>
+            <a class="active" href="stok.html">Katalog</a>
+            <a href="checkout.html">Pemesanan</a>
+            <a href="tracking.html">Lacak paket</a>
+        </nav>
+
+        <button class="btn btn-outline btn-small" onclick="logout()">
+            Keluar ↗
+        </button>
+
+    </header>
+
+
+    <main class="page-wrap">
+
+        <section class="page-intro">
+
+            <p class="eyebrow accent">
+                01 / DAFTAR KOLEKSI
+            </p>
+
+            <h1>
+                Temukan bacaan<br>
+                <em>berikutnya.</em>
+            </h1>
+
+            <p>
+                Jelajahi buku ajar dari berbagai bidang.
+                Periksa edisi dan stok sebelum melakukan pemesanan.
+            </p>
+
+        </section>
+
+
+        <section class="catalog-layout">
+
+            <div class="catalog-main">
+
+                <div class="section-heading compact">
+
+                    <div>
+                        <p class="eyebrow">
+                            PILIHAN BUKU
+                        </p>
+
+                        <h2>
+                            Koleksi tersedia
+                        </h2>
+                    </div>
+
+                    <span class="count-pill" id="jumlahKoleksi">
+                        5 judul
+                    </span>
+
+                </div>
+
+
+                <div id="kartuKatalog" class="book-grid"></div>
+
+
+                <div class="panel table-panel">
+
+                    <div class="section-heading compact">
+
+                        <div>
+                            <p class="eyebrow">
+                                DATA INVENTARIS
+                            </p>
+
+                            <h2>
+                                Rincian stok buku
+                            </h2>
+                        </div>
+
+                    </div>
+
+
+                    <div class="table-wrap">
+
+                        <table>
+
+                            <thead>
+                                <tr>
+                                    <th>Kode</th>
+                                    <th>Nama buku</th>
+                                    <th>Jenis / edisi</th>
+                                    <th>Harga</th>
+                                    <th>Stok</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="tabelBuku"></tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <aside class="add-panel">
+
+                <p class="eyebrow">
+                    ADMIN / INVENTARIS
+                </p>
+
+                <h2>
+                    Tambah koleksi
+                </h2>
+
+                <p class="subtle">
+                    Masukkan buku baru ke daftar katalog.
+                </p>
+
+
+                <form id="formBuku" class="stack-form">
+
+                    <label for="judulBuku">
+                        Nama buku
+                    </label>
+
+                    <input
+                        id="judulBuku"
+                        type="text"
+                        placeholder="Judul buku"
+                        required
+                    >
+
+
+                    <label for="jenisBuku">
+                        Jenis buku
+                    </label>
+
+                    <input
+                        id="jenisBuku"
+                        type="text"
+                        value="Buku Ajar"
+                        required
+                    >
+
+
+                    <label for="edisiBuku">
+                        Edisi
+                    </label>
+
+                    <input
+                        id="edisiBuku"
+                        type="number"
+                        min="1"
+                        value="1"
+                        required
+                    >
+
+
+                    <label for="hargaBuku">
+                        Harga (Rp)
+                    </label>
+
+                    <input
+                        id="hargaBuku"
+                        type="number"
+                        min="1"
+                        placeholder="150000"
+                        required
+                    >
+
+
+                    <label for="stokBuku">
+                        Jumlah stok
+                    </label>
+
+                    <input
+                        id="stokBuku"
+                        type="number"
+                        min="0"
+                        placeholder="20"
+                        required
+                    >
+
+
+                    <button class="btn full" type="submit">
+                        + Tambah buku
+                    </button>
+
+                </form>
+
+
+                <p class="small-note">
+                    Data katalog disimpan sementara pada browser
+                    menggunakan Local Storage.
+                </p>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+        <span>© 2026 BukuRuang</span>
+        <span>Katalog buku</span>
+    </footer>
+
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

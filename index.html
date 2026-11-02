@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masuk | BukuRuang</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="login-page">
+
+    <main class="login-shell">
+
+        <section class="login-art">
+
+            <a class="brand brand-light" href="login.html">
+                <span class="brand-mark">br.</span>
+                <span>BukuRuang</span>
+            </a>
+
+            <div class="art-copy">
+                <p class="eyebrow">
+                    RUANG UNTUK IDE BARU
+                </p>
+
+                <h1>
+                    Temukan cerita,<br>
+                    <em>mulai perjalanan.</em>
+                </h1>
+
+                <p>
+                    Koleksi bacaan pilihan untuk menemani setiap langkah dan rasa ingin tahu.
+                </p>
+            </div>
+
+            <div class="art-bottom">
+                <span>EST. 2026</span>
+                <span>READ • LEARN • GROW</span>
+            </div>
+
+            <div class="art-shape shape-one"></div>
+            <div class="art-shape shape-two"></div>
+
+        </section>
+
+
+        <section class="login-form-side">
+
+            <div class="login-form-wrap">
+
+                <p class="eyebrow accent">
+                    SELAMAT DATANG KEMBALI
+                </p>
+
+                <h2>
+                    Masuk ke akunmu
+                </h2>
+
+                <p class="subtle">
+                    Lanjutkan menjelajahi koleksi BukuRuang.
+                </p>
+
+
+                <form id="formLogin" class="stack-form">
+
+                    <label for="email">
+                        Alamat email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="nama@email.com"
+                        required
+                    >
+
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Masukkan password"
+                        required
+                    >
+
+
+                    <button type="submit" class="btn full">
+                        Masuk ke BukuRuang <span>→</span>
+                    </button>
+
+                </form>
+
+
+                <div class="login-links">
+
+                    <button
+                        type="button"
+                        class="text-action"
+                        onclick="bukaModal('modalLupa')"
+                    >
+                        Lupa password?
+                    </button>
+
+                    <span>
+                        Belum punya akun?
+                        <button
+                            type="button"
+                            class="text-action"
+                            onclick="bukaModal('modalDaftar')"
+                        >
+                            Daftar
+                        </button>
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Modal Lupa Password -->
+    <div class="modal" id="modalLupa">
+
+        <div class="modal-content">
+
+            <button
+                class="close"
+                onclick="tutupModal('modalLupa')"
+            >
+                ×
+            </button>
+
+            <p class="eyebrow accent">
+                BANTUAN AKUN
+            </p>
+
+            <h2>
+                Reset password
+            </h2>
+
+            <p class="subtle">
+                Masukkan email akun yang terdaftar.
+            </p>
+
+            <input
+                type="email"
+                id="emailLupa"
+                placeholder="Alamat email"
+            >
+
+            <button
+                class="btn full"
+                onclick="kirimReset()"
+            >
+                Periksa email
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Modal Daftar -->
+    <div class="modal" id="modalDaftar">
+
+        <div class="modal-content">
+
+            <button
+                class="close"
+                onclick="tutupModal('modalDaftar')"
+            >
+                ×
+            </button>
+
+            <p class="eyebrow accent">
+                GABUNG BUKURUANG
+            </p>
+
+            <h2>
+                Buat akun baru
+            </h2>
+
+            <input
+                type="text"
+                id="namaDaftar"
+                placeholder="Nama lengkap"
+            >
+
+            <input
+                type="email"
+                id="emailDaftar"
+                placeholder="Alamat email"
+            >
+
+            <input
+                type="password"
+                id="passwordDaftar"
+                placeholder="Password"
+            >
+
+            <button
+                class="btn full"
+                onclick="daftarAkun()"
+            >
+                Buat akun
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

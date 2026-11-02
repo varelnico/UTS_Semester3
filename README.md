@@ -1,9 +1,9 @@
 # Project Ujian Tengah Semester
 # Mata kuliah : Pemrograman Web
 
-Nama    : Varel Nico Ramadhan
-NIM     : 312510156
-Kelas   : I251B
+### Nama    : Varel Nico Ramadhan
+### NIM     : 312510156
+### Kelas   : I251B
 
 
 BukuRuang adalah website sederhana yang dibuat untuk mengelola data buku dan melakukan pemesanan buku secara online. Website ini memiliki beberapa halaman yang saling terhubung, mulai dari login, dashboard, katalog buku, pemesanan, hingga pelacakan paket.

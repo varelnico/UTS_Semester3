@@ -4,7 +4,7 @@
 ### Nama    : Varel Nico Ramadhan
 ### NIM     : 312510156
 ### Kelas   : I251B
-
+## Link video YouTube : https://youtu.be/uJHs0ATSnxc?si=c74CsGbmiyr6Hoou 
 
 BukuRuang adalah website sederhana yang dibuat untuk mengelola data buku dan melakukan pemesanan buku secara online. Website ini memiliki beberapa halaman yang saling terhubung, mulai dari login, dashboard, katalog buku, pemesanan, hingga pelacakan paket.
 

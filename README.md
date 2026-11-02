@@ -60,10 +60,3 @@ BukuRuang/
 │
 └── img/
 ```
-
-## Cara Menjalankan
-
-1. Download repository ini atau lakukan clone.
-2. Buka folder project menggunakan Visual Studio Code.
-3. Jalankan file `login.html` melalui browser.
-4. Website sudah dapat digunakan.
